@@ -1,0 +1,11 @@
+{
+  "name": "huginn-monorepo",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hatfim/huginn.git"
+  },
+}
