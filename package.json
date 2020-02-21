@@ -1,11 +1,46 @@
 {
-  "name": "huginn-monorepo",
+  "name": "huginn",
   "private": true,
+  "scripts": {
+    "new-version": "lerna version --conventional-commits",
+    "release": "lerna publish from-package",
+    "commit": "npx git-cz",
+    "nuke": "rm -r node_modules; for d in packages/*/node_modules; do echo $d; rm -r $d; done"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": []
+  },
+  "dependencies": {},
   "devDependencies": {
-    "lerna": "^3.19.0"
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "@commitlint/config-lerna-scopes": "^8.1.0",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
+    "husky": "^3.0.1",
+    "lerna": "^3.16.1"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/hatfim/huginn.git"
   },
+  "author": "hatfim ydniw <hatfim.ydniw@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hatfim/huginn/issues"
+  },
+  "homepage": "https://github.com/hatfim/huginn#readme"
 }
