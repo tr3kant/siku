@@ -1,0 +1,13 @@
+/*------------------------------------*\
+  #BEM-CONSTRUCTOR
+\*------------------------------------*/
+
+@import "~sass-bem-constructor/dist/sass-bem-constructor";
+
+
+
+
+
+// tell the rest of framework that we have this module
+
+$siku-tools-bem-constructor: true;

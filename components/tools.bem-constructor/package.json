@@ -1,0 +1,30 @@
+{
+  "name": "@siku/tools-bem-constructor",
+  "version": "0.0.1",
+  "description": "bem-constructor wrapper",
+  "main": "_tools.bem-constructor.scss",
+  "keywords": [
+    "bemit",
+    "css",
+    "itcss",
+    "sass",
+    "siku"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hatfim/siku.git",
+    "directory": "components/tools.bem-constructor"
+  },
+  "author": "hatfim ydniw <hatfim.ydniw@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hatfim/siku/issues"
+  },
+  "homepage": "https://github.com/hatfim/siku/tree/master/packages/tools.bem-constructor#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "sass-bem-constructor": "^1.1.0"
+  }
+}
