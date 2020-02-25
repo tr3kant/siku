@@ -1,5 +1,5 @@
 {
-  "name": "huginn",
+  "name": "siku",
   "private": true,
   "scripts": {
     "new-version": "lerna version --conventional-commits",
@@ -19,8 +19,9 @@
   },
   "workspaces": {
     "packages": [
-      "packages/*"
-    ],
+      "components/*",
+      "tools/*"
+        ],
     "nohoist": []
   },
   "dependencies": {},
@@ -35,12 +36,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hatfim/huginn.git"
+    "url": "https://github.com/hatfim/siku.git"
   },
   "author": "hatfim ydniw <hatfim.ydniw@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hatfim/huginn/issues"
+    "url": "https://github.com/hatfim/siku/issues"
   },
-  "homepage": "https://github.com/hatfim/huginn#readme"
+  "homepage": "https://github.com/hatfim/siku#readme"
 }
