@@ -1,0 +1,18 @@
+props:
+  border-radius-sharp:
+    value: "0"
+  border-radius-pill:
+    value: "20rem"
+  border-radius-default:
+    value: "4px"
+  border-radius-circle:
+    value: "50%"
+  border-width-form:
+    value: "1px"
+  border-width-button:
+    value: "2px"
+
+global:
+  platform: "core"
+  type: "border"
+  category: "border"

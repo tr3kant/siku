@@ -1,0 +1,37 @@
+props:
+  spacing-01:
+    value: "2px"
+  spacing-02:
+    value: "4px"
+  spacing-03:
+    value: "8px"
+  spacing-04:
+    value: "12px"
+  spacing-05:
+    value: "16px"
+  spacing-06:
+    value: "24px"
+  spacing-07:
+    value: "32px"
+  spacing-08:
+    value: "40px"
+  spacing-09:
+    value: "48px"
+  layout-01:
+    value: "16px"
+  layout-02:
+    value: "24px"
+  layout-03:
+    value: "32px"
+  layout-04:
+    value: "48px"
+  layout-05:
+    value: "64px"
+  layout-06:
+    value: "96px"
+  layout-07:
+    value: "160px"
+global:
+  platform: "core"
+  type: "spacing"
+  category: "spacing"

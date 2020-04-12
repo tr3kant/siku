@@ -1,0 +1,8 @@
+.DS_Store
+.sass-cache
+node_modules/
+build/*.css
+npm-debug.log
+lerna-debug.log
+.vscode/
+.idea/
