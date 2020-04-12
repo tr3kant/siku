@@ -16,6 +16,7 @@
     }
   },
   "scripts": {
+    "commit": "git-cz",
     "build:tokens": "lerna exec --scope @siku/tokens-* theo token.yml -- --format scss --dest ./dist",
     "build:tokens:onchange": "onchange \"./tokens/**/*.yml\" -- npm run build:tokens"
   },

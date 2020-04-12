@@ -51,10 +51,13 @@ module.exports = {
       name: 'platform',
     },
     {
-      name: 'toolkit-ui',
+      name: 'tokens',
     },
     {
-      name: 'toolkit-core',
+      name: 'ui',
+    },
+    {
+      name: 'core',
     },
     {
       name: 'preview',
