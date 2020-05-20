@@ -28,7 +28,7 @@
     "node_modules/"
   ],
   "workspaces": [
-    "packages/*",
+    "components/*",
     "tokens/*"
   ],
   "devDependencies": {
@@ -64,6 +64,7 @@
     "pre-commit": "^1.2.2",
     "prettier": "1.8.2",
     "sass": "1.26.2",
+    "theo": "^8.0.1",
     "raw-loader": "^0.5.1",
     "remark": "9.0.0",
     "remark-frontmatter": "1.2.0",

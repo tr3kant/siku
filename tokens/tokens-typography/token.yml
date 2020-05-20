@@ -1,56 +1,5 @@
-props:
-  # Backward-compatible, generic font weights of OpenTable's desktop web brand font.
-  # Should only be used when composing font faces for the brand font.
-  # =============================================
-  font-weight-regular:
-    type: "400"
-    value: "normal"
-  font-weight-medium:
-    type: "raw"
-    value: "500"
-  font-weight-bold:
-    type: "raw"
-    value: "bold"
-
-  font-size-code-01:
-    type: "size"
-    value: "{!size-75}"
-  font-size-code-02:
-    type: "size"
-    value: "{!size-100}"
-
-
-  heading-xxxl-font-size:
-    type: "size"
-    value: "{!size-1300}"
-  heading-xxl-font-size:
-    type: "size"
-    value: "{!size-1100}"
-  heading-xl-font-size:
-    type: "size"
-    value: "{!size-900}"
-  heading-l-font-size:
-    type: "size"
-    value: "{!size-700}"
-  heading-m-font-size:
-    type: "size"
-    value: "{!size-500}"
-  heading-s-font-size:
-    type: "size"
-    value: "{!size-2300}"
-  heading-xs-font-size:
-    type: "size"
-    value: "{!size-200}"
-  heading-xxs-font-size:
-    type: "size"
-    value: "{!size-100}"
-  heading-xxxs-font-size:
-    type: "size"
-    value: "{!size-75}"
-
-
 imports:
-  - ./aliases.yml
+  - ./heading.yml
 
 global:
   platform: "desktop"
