@@ -1,0 +1,16 @@
+props:
+  breakpoint-small:
+    value: "320px"
+  breakpoint-medium:
+    value: "672px"
+  breakpoint-large:
+    value: "1056px"
+  breakpoint-x-large:
+    value: "1312px"
+  breakpoint-max:
+    value: "1584px"
+
+global:
+  platform: "core"
+  type: "breakpoint"
+  category: "breakpoint"

@@ -1,0 +1,17 @@
+
+aliases:
+  box-shadow:
+    value: "rgba(0, 0, 0, 0.2)"
+props:
+  # Used in restaurant profile; generic containers
+  # =============================================
+  box-shadow-color:
+    value: "{!box-shadow}"
+
+  box-shadow:
+    value: "0 2px 6px 0 {!box-shadow}"
+
+global:
+  platform: "core"
+  type: "shadow"
+  category: "shadow"

@@ -1,5 +1,71 @@
-imports:
-  - ./heading.yml
+props:
+  # The font name of Siku's desktop web brand font.
+  # =============================================
+  font-family-heading:
+    type: "raw"
+    value: "M PLUS Rounded 1c"
+
+  font-family-body:
+    type: "raw"
+    value: "M PLUS 1p"
+
+  # Backward-compatible, generic font weights of Siku's desktop web brand font.
+  # Should only be used when composing font faces for the brand font.
+  # =============================================
+  font-weight-light:
+    type: "raw"
+    value: "300"
+  font-weight-normal:
+    type: "raw"
+    value: "400"
+  font-weight-medium:
+    type: "raw"
+    value: "500"
+  font-weight-bold:
+    type: "raw"
+    value: "700"
+
+
+  # The entire font family definition for Siku's desktop web.
+  # Apply to the appropriate root element such as <html>, <body> or `reactroot`.
+  # =============================================
+  font-family:
+    type: "raw"
+    value: "'M PLUS 1p', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+
+
+  # Design decisions for font size
+  #
+  # =============================================
+  h000-font-size:
+    type: "size"
+    value: "60px"
+  h00-font-size:
+    type: "size"
+    value: "54px"
+  h0-font-size:
+    type: "size"
+    value: "48px"
+  h1-font-size:
+    type: "size"
+    value: "42px"
+  h2-font-size:
+    type: "size"
+    value: "32px"
+  h3-font-size:
+    type: "size"
+    value: "28px"
+  h4-font-size:
+    type: "size"
+    value: "28px"
+  h5-font-size:
+    type: "size"
+    value: "16px"
+  h6-font-size:
+    type: "size"
+    value: "14px"
+
+
 
 global:
   platform: "desktop"
