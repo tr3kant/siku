@@ -1,0 +1,72 @@
+props:
+# Core Color /
+- name: ui-background
+  value: "{!white}"
+- name: ui-01
+  value: "{!gray-10}"
+- name: ui-02
+  value: "{!white}"
+- name: ui-03
+  value: "{!gray-20}"
+- name: ui-04
+  value: "{!gray-50}"
+- name: ui-05
+  value: "{!gray-100}"
+- name: text-01
+  value: "{!gray-100}"
+- name: text-02
+  value: "{!gray-70}"
+- name: text-03
+  value: "{!gray-40}"
+- name: text-04
+  value: "{!white}"
+- name: text-05
+  value: "{!gray-60}"
+- name: text-error
+  value: "{!red-60}"
+- name: icon-01
+  value: "{!gray-100}"
+- name: icon-02
+  value: "{!gray-70}"
+- name: icon-03
+  value: "{!white}"
+- name: link-01
+  value: "{!blue-60}"
+- name: inverse-link
+  value: "{!blue-40}"
+- name: field-01
+  value: "{!gray-10}"
+- name: field-02
+  value: "{!white}"
+- name: inverse-01
+  value: "{!white}"
+- name: inverse-02
+  value: "{!gray-80}"
+- name: support-01
+  value: "{!red-50}"
+- name: support-02
+  value: "{!green-50}"
+- name: support-03
+  value: "{!orange-50}"
+- name: support-04
+  value: "{!blue-70}"
+- name: inverse-support-01
+  value: "{!red-40}"
+- name: inverse-support-02
+  value: "{!green-40}"
+- name: inverse-support-03
+  value: "{!orange-40}"
+- name: inverse-support-04
+  value: "{!blue-50}"
+- name: overlay-01
+  value: "rgba(0, 0, 0, 0.5)"
+- name: danger
+  value: "{!red-50}"
+
+imports:
+  - ../aliases/colors.aliases.yml
+
+global:
+  platform: "core"
+  type: "color"
+  category: "color"

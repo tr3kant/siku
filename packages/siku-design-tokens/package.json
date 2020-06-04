@@ -1,0 +1,38 @@
+{
+  "name": "@sikucss/design-tokens",
+  "version": "0.0.1",
+  "description": "Siku Design Tokens",
+  "style": "dist/index.scss",
+  "author": {
+    "email": "hatfim.ydniw.com"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sikucss/siku.git"
+  },
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "npm-run-all build:**",
+    "build:gulp": "gulp",
+    "build:scss": "node scripts/scss.js && node scripts/fn-copy.js",
+    "copy:func": "node scripts/fn-copy.js",
+    "build:format": "prettier ./dist/*.scss --write",
+    "clean": "rimraf ./dist"
+  },
+  "devDependencies": {
+    "decompress": "^4.2.0",
+    "gulp": "^4.0.2",
+    "gulp-theo": "^2.0.1",
+    "npm-run-all": "^4.1.5",
+    "path": "^0.12.7",
+    "plugin-error": "^1.0.1",
+    "prettier": "^1.18.2",
+    "rimraf": "^2.6.3",
+    "theo": "^8.1.5"
+  },
+  "dependencies": {}
+}

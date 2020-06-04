@@ -1,0 +1,18 @@
+props:
+  font-weight-light:
+    type: "font-weight"
+    value: "300"
+  font-weight-normal:
+    type: "font-weight"
+    value: "400"
+  font-weight-medium:
+    type: "font-weight"
+    value: "500"
+  font-weight-bold:
+    type: "font-weight"
+    value: "700"
+
+global:
+  platform: "desktop"
+  type: "font-weight"
+  category: "typography"

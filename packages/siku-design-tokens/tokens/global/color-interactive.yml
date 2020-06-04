@@ -1,0 +1,62 @@
+props:
+# Interactive Color /
+- name: focus
+  value: "{!blue-60}"
+- name: inverse-focus-ui
+  value: "{!white}"
+- name: hover-primary
+  value: "#0353e9"
+- name: active-primary
+  value: "{!blue-80}"
+- name: hover-primary-text
+  value: "{!blue-70}"
+- name: hove-secondary
+  value: "#4c4c4c"
+- name: active-secondary
+  value: "{!gray-60}"
+- name: hover-tertiary
+  value: "#0353e9"
+- name: active-tertiary
+  value: "{!blue-80}"
+- name: hover-ui
+  value: "#e5e5e5"
+- name: active-ui
+  value: "{!gray-30}"
+- name: selected-ui
+  value: "{!gray-20}"
+- name: selected-light-ui
+  value: "{!gray-20}"
+- name: inverse-hover-ui
+  value: "#4c4c4c"
+- name: hover-selected-ui
+  value: "#cacaca"
+- name: hover-danger
+  value: "{!red-60}"
+- name: active-danger
+  value: "{!red-70}"
+- name: hover-row
+  value: "#e5e5e5"
+- name: visited-link
+  value: "#8a3ffc"
+- name: disabled-01
+  value: "{!gray-10}"
+- name: disabled-02
+  value: "{!gray-30}"
+- name: disabled-03
+  value: "{!gray-50}"
+- name: highlight
+  value: "{!blue-20}"
+- name: decorative-01
+  value: "{!gray-20}"
+- name: skeleton-01
+  value: "#e5e5e5"
+- name: skeleton-02
+  value: "{!gray-30}"
+
+imports:
+  - ../aliases/colors.aliases.yml
+
+global:
+  platform: "core"
+  type: "color"
+  category: "color"

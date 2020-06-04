@@ -1,0 +1,71 @@
+# This a list aliases color token for used
+aliases :
+# Base Color /
+  black   : "#000000"
+  white   : "#ffffff"
+# Brand Color /
+  brand-30: "rgb(242, 170, 161)"
+  brand-40: "rgb(237, 111, 10)"
+  brand-50: "rgb(228, 33, 39)"
+  brand-60: "rgb(146, 43, 38)"
+  brand-70: "rgb(87, 34, 30)"
+# Blue Color /
+  blue-20: "rgb(90, 169, 250)"
+  blue-30: "rgb(75, 156, 245)"
+  blue-40: "rgb(55, 142, 240)"
+  blue-50: "rgb(38, 128, 235)"
+  blue-60: "rgb(20, 115, 230)"
+  blue-70: "rgb(13, 102, 208)"
+  blue-80: "rgb(9, 90, 186)"
+# Fuschia Color /
+  fuchsia-40: "rgb(207, 62, 220)"
+  fuchsia-50: "rgb(192, 56, 204)"
+  fuchsia-60: "rgb(177, 48, 189)"
+  fuchsia-70: "rgb(162, 40, 173)"
+# Gray Color /
+  gray-10:  "rgb(255, 255, 255)"
+  gray-20:  "rgb(244, 244, 244)"
+  gray-30:  "rgb(234, 234, 234)"
+  gray-40:  "rgb(211, 211, 211)"
+  gray-50:  "rgb(188, 188, 188)"
+  gray-60:  "rgb(149, 149, 149)"
+  gray-70:  "rgb(116, 116, 116)"
+  gray-80:  "rgb(80, 80, 80)"
+  gray-90:  "rgb(50, 50, 50)"
+  gray-100: "rgb(22,22,22)"
+
+# Green Color /
+  green-40: "rgb(51, 171, 132)"
+  green-50: "rgb(45, 157, 120)"
+  green-60: "rgb(38, 142, 108)"
+  green-70: "rgb(18, 128, 92)"
+# Indigo Color /
+  indigo-40: "rgb(117, 117, 241)"
+  indigo-50: "rgb(103, 103, 236)"
+  indigo-60: "rgb(92, 92, 224)"
+  indigo-70: "rgb(81, 81, 211)"
+# Magenta Color /
+  magenta-40: "rgb(226, 73, 157)"
+  magenta-50: "rgb(216, 55, 144)"
+  magenta-60: "rgb(202, 41, 130)"
+  magenta-70: "rgb(188, 28, 116)"
+# Orange Color /
+  orange-40: "rgb(242, 148, 35)"
+  orange-50: "rgb(230, 134, 25)"
+  orange-60: "rgb(218, 123, 17)"
+  orange-70: "rgb(203, 111, 16)"
+# Purple Color /
+  purple-40: "rgb(157, 100, 225)"
+  purple-50: "rgb(146, 86, 217)"
+  purple-60: "rgb(134, 76, 204)"
+  purple-70: "rgb(122, 66, 191)"
+# Red Color /
+  red-40: "rgb(236, 91, 98)"
+  red-50: "rgb(227, 72, 80)"
+  red-60: "rgb(215, 55, 63)"
+  red-70: "rgb(201, 37, 45)"
+# Yellow Color /
+  yellow-40: "rgb(237, 204 0)"
+  yellow-50: "rgb(223, 191 0)"
+  yellow-60: "rgb(210, 178 0)"
+  yellow-70: "rgb(196, 166 0)"

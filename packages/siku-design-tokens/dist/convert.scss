@@ -1,0 +1,17 @@
+/// Default font size
+/// @type Number
+$siku--base-font-size: 16px !default;
+
+/// Convert a given px unit to a rem unit
+/// @param {Number} $px - Number with px unit
+/// @return {Number} Number with rem unit
+@function siku--rem($px) {
+  @return ($px / $siku--base-font-size) * 1rem;
+}
+
+/// Convert a given px unit to a em unit
+/// @param {Number} $px - Number with px unit
+/// @return {Number} Number with em unit
+@function siku--em($px) {
+  @return ($px / $siku--base-font-size) * 1em;
+}

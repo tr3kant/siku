@@ -1,0 +1,30 @@
+props:
+  spacing-01  :
+    value: "siku--mini-units(0.25)"
+  spacing-02  :
+    value: "siku--mini-units(0.5)"
+  spacing-03  :
+    value: "siku--mini-units(1)"
+  spacing-04  :
+    value: "siku--mini-units(1.5)"
+  spacing-05  :
+    value: "siku--mini-units(2)"
+  spacing-06  :
+    value: "siku--mini-units(3)"
+  spacing-07  :
+    value: "siku--mini-units(4)"
+  spacing-08  :
+    value: "siku--mini-units(5)"
+  spacing-09  :
+    value: "siku--mini-units(6)"
+  spacing-10  :
+    value: "siku--mini-units(8)"
+  spacing-11  :
+    value: "siku--mini-units(10)"
+  spacing-12  :
+    value: "siku--mini-units(12)"
+
+global:
+  platform: "core"
+  type: "spacing"
+  category: "spacing"

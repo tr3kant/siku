@@ -1,0 +1,26 @@
+$font-weight-map: (
+  font-weight-light: (
+    300
+  ),
+  font-weight-normal: (
+    400
+  ),
+  font-weight-medium: (
+    500
+  ),
+  font-weight-bold: (
+    700
+  )
+);
+
+@function siku--font-weight($variant) {
+  @if map-has-key($font-weight-map, "font-weight-#{$variant}") {
+    @return map-get($font-weight-map, "font-weight-#{$variant}");
+  }
+
+  @error 'font-weight #{$variant} not found.';
+}
+
+@mixin siku--font-weight($variant) {
+  font-weight: siku--font-weight($variant);
+}

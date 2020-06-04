@@ -1,0 +1,14 @@
+props:
+  font-family-heading:
+    type: "font-family"
+    value: "'M PLUS Rounded 1c', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+
+  font-family-body:
+    type: "font-family"
+    value: "'M PLUS 1p', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+
+
+global:
+  platform: "desktop"
+  type: "font-family"
+  category: "typography"

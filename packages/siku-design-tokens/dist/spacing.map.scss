@@ -1,0 +1,50 @@
+$spacing-map: (
+  spacing-10: (
+    siku--mini-units(8)
+  ),
+  spacing-11: (
+    siku--mini-units(10)
+  ),
+  spacing-01: (
+    siku--mini-units(0.25)
+  ),
+  spacing-12: (
+    siku--mini-units(12)
+  ),
+  spacing-02: (
+    siku--mini-units(0.5)
+  ),
+  spacing-03: (
+    siku--mini-units(1)
+  ),
+  spacing-04: (
+    siku--mini-units(1.5)
+  ),
+  spacing-05: (
+    siku--mini-units(2)
+  ),
+  spacing-06: (
+    siku--mini-units(3)
+  ),
+  spacing-07: (
+    siku--mini-units(4)
+  ),
+  spacing-08: (
+    siku--mini-units(5)
+  ),
+  spacing-09: (
+    siku--mini-units(6)
+  )
+);
+
+@function siku--spacing($variant) {
+  @if map-has-key($spacing-map, "spacing-#{$variant}") {
+    @return map-get($spacing-map, "spacing-#{$variant}");
+  }
+
+  @error 'spacing #{$variant} not found.';
+}
+
+@mixin siku--spacing($variant) {
+  spacing: siku--spacing($variant);
+}

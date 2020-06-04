@@ -1,25 +1,14 @@
 {
   "version": "independent",
   "npmClient": "yarn",
-  "npmClientArgs": [
-    "--frozen-lockfile"
-  ],
-  "command": {
-    "version": {
-      "allowBranch": "master",
-      "message": "chore: publish %s"
-    }
-  },
   "useWorkspaces": true,
-  "packages": [
-    "packages/*"
-  ],
-  "ignoreChanges": [
-    "**/__fixtures__/**",
-    "**/__tests__/**",
-    "**/docs/**",
-    "**/e2e/**",
-    "**/examples/**",
-    "**/*.md"
-  ]
+  "command": {
+    "publish": {
+      "conventionalCommits": true,
+      "changelogPreset": "siku"
+    },
+    "version": {
+      "message": "chore(release): release"
+    }
+  }
 }

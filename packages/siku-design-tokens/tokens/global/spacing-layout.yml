@@ -1,0 +1,21 @@
+props:
+  layout-01  :
+    value: "siku--mini-units(2)"
+  layout-02  :
+    value: "siku--mini-units(3)"
+  layout-03  :
+    value: "siku--mini-units(4)"
+  layout-04  :
+    value: "siku--mini-units(6)"
+  layout-05  :
+    value: "siku--mini-units(8)"
+  layout-06  :
+    value: "siku--mini-units(12)"
+  layout-07  :
+    value: "siku--mini-units(20)"
+
+
+global:
+  platform: "core"
+  type: "spacing"
+  category: "spacing"

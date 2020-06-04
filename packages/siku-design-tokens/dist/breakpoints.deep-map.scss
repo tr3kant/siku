@@ -1,0 +1,40 @@
+$breakpoints-map: (
+  lg: (
+    columns: 16,
+    margin: siku--rem(16px),
+    width: siku--rem(1056px),
+    columns: 16,
+    margin: siku--rem(16px),
+    width: siku--rem(1312px)
+  ),
+  max: (
+    columns: 16,
+    margin: siku--rem(24px),
+    width: siku--rem(1584px)
+  ),
+  md: (
+    columns: 8,
+    margin: siku--rem(16px),
+    width: siku--rem(672px)
+  ),
+  sm: (
+    columns: 4,
+    margin: 0,
+    width: siku--rem(320px)
+  ),
+  xlg: (
+    columns: 16,
+    margin: siku--rem(16px),
+    width: siku--rem(1312px)
+  )
+) !default;
+
+@function siku--breakpoints($parent, $variant) {
+  @if map-has-key($breakpoints-map, $parent) {
+    $parent-map: map-get($breakpoints-map, $parent);
+    @if map-has-key($parent-map, $variant) {
+      @return map-get($parent-map, $variant);
+    }
+  }
+  @error 'breakpoints '#{$parent} - #{$variant}' not found.';
+}

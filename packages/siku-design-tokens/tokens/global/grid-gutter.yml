@@ -1,0 +1,24 @@
+props:
+  # The default gutter width is 32px because type, within
+  # or without containers, never has less than a 32px gutter.
+  # =============================================
+  grid-gutter-default:
+    value: "siku--rem(32px)"
+
+  # Narrow grid mode when you are dealing with separate pieces of information
+  # with separate destinations, but would like to save more real estate
+  # =============================================
+  grid-gutter-narrow:
+    value: "siku--rem(16px)"
+
+  # When you have separate pieces of information that form a larger picture,
+  # like a dashboard or an overview page
+  # =============================================
+  grid-gutter-condensed:
+    value: "siku--rem(2px)"
+
+
+global:
+  platform: "core"
+  type: "grid"
+  category: "grid"

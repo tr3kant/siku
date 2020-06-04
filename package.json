@@ -1,30 +1,35 @@
 {
-  "name": "siku",
   "private": true,
-  "scripts": {
-    "new-version": "lerna version --conventional-commits",
-    "release": "lerna publish from-package",
-    "commit": "npx git-cz",
-    "nuke": "rm -r node_modules; for d in packages/*/node_modules; do echo $d; rm -r $d; done"
+  "config": {
+    "paths": "--include-path node_modules/ --include-path packages/core/node_modules/ --include-path packages/ui/node_modules/",
+    "precision": "--precision 9",
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "config/commit/config.js"
+    }
   },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+  "scripts": {
+    "commit": "git-cz",
+    "build:tokens": "lerna exec --scope @siku/tokens-* theo token.yml -- --format scss --dest ./dist",
+    "build:tokens:onchange": "onchange \"./tokens/**/*.yml\" -- npm run build:tokens"
   },
-  "workspaces": {
-    "packages": [
-      "components/*",
-      "tools/*"
-        ],
-    "nohoist": []
-  },
-  "dependencies": {},
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "eslintIgnore": [
+    "node_modules/"
+  ],
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
@@ -33,15 +38,5 @@
     "cz-conventional-changelog": "^3.0.2",
     "husky": "^3.0.1",
     "lerna": "^3.16.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/hatfim/siku.git"
-  },
-  "author": "hatfim ydniw <hatfim.ydniw@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/hatfim/siku/issues"
-  },
-  "homepage": "https://github.com/hatfim/siku#readme"
+  }
 }
