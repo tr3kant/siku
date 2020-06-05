@@ -1,0 +1,145 @@
+// =============================================================================
+// SETTINGS / #Z-INDEX
+// =============================================================================
+
+// Our framework (and recommended consumer) z-index values are held in a map.
+// Access these values using:
+//
+//   z-index($KEY)
+//
+// For example:
+//
+//   .foo {
+//     color: z-index(5);
+//   }
+
+$caption-01: (
+  font-size: siku--type-scale(1),
+  font-weight: siku--font-weight('regular'),
+  line-height: siku--rem(16px),
+  letter-spacing: 0.32px,
+) !default;
+
+
+$label-01: (
+  font-size: siku--type-scale(1),
+  font-weight: siku--font-weight('regular'),
+  line-height: siku--rem(16px),
+  letter-spacing: 0.32px,
+) !default;
+
+
+$helper-text-01: (
+  font-size: siku--type-scale(1),
+  line-height: siku--rem(16px),
+  letter-spacing: 0.32px,
+) !default;
+
+
+$body-short-01: (
+  font-size: siku--type-scale(2),
+  font-weight: siku--font-weight('regular'),
+  line-height: siku--rem(18px),
+  letter-spacing: 0.16px,
+) !default;
+
+
+$body-long-01: (
+  font-size: siku--type-scale(2),
+  font-weight: siku--font-weight('regular'),
+  line-height: siku--rem(20px),
+  letter-spacing: 0.16px,
+) !default;
+
+
+$body-short-02: (
+  font-size: siku--type-scale(3),
+  font-weight: siku--font-weight('regular'),
+  line-height: siku--rem(22px),
+  letter-spacing: 0,
+) !default;
+
+
+$body-long-02: (
+  font-size: siku--type-scale(3),
+  font-weight: siku--font-weight('regular'),
+  line-height: siku--rem(24px),
+  letter-spacing: 0,
+) !default;
+
+$heading-01: (
+  font-size: siku--type-scale(2),
+  font-weight: siku--font-weight('bold'),
+  line-height: siku--rem(18px),
+  letter-spacing: 0.16px,
+) !default;
+
+
+$productive-heading-01: $heading-01 !default;
+
+$heading-02: (
+  font-size: siku--type-scale(3),
+  font-weight: siku--font-weight('bold'),
+  line-height: siku--rem(22px),
+  letter-spacing: 0,
+) !default;
+
+
+$productive-heading-02: $heading-02 !default;
+
+$productive-heading-03: (
+  font-size: siku--type-scale(5),
+  font-weight: siku--font-weight('regular'),
+  line-height: siku--rem(26px),
+  letter-spacing: 0,
+) !default;
+
+
+$productive-heading-04: (
+  font-size: siku--type-scale(7),
+  font-weight: siku--font-weight('regular'),
+  line-height: siku--rem(36px),
+  letter-spacing: 0,
+) !default;
+
+$productive-heading-05: (
+  font-size: siku--type-scale(8),
+  font-weight: siku--font-weight('regular'),
+  line-height: siku--rem(40px),
+  letter-spacing: 0,
+) !default;
+
+$productive-heading-06: (
+  font-size: siku--type-scale(8),
+  font-weight: siku--font-weight('light'),
+  line-height: siku--rem(50px),
+  letter-spacing: 0,
+) !default;
+
+$productive-heading-07: (
+  font-size: siku--type-scale(10),
+  font-weight: siku--font-weight('light'),
+  line-height: siku--rem(64px),
+  letter-spacing: 0,
+) !default;
+
+
+$typography: (
+  caption-01: $caption-01,
+  label-01: $label-01,
+  helper-text-01: $helper-text-01,
+  body-short-01: $body-short-01,
+  body-short-02: $body-short-02,
+  body-long-01: $body-long-01,
+  body-long-02: $body-long-02,
+  heading-01: $heading-01,
+  heading-02: $heading-02,
+  productive-heading-01: $productive-heading-01,
+  productive-heading-02: $productive-heading-02,
+  productive-heading-03: $productive-heading-03,
+  productive-heading-04: $productive-heading-04,
+  productive-heading-05: $productive-heading-05,
+  productive-heading-06: $productive-heading-06,
+  productive-heading-07: $productive-heading-07
+);
+

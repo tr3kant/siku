@@ -1,0 +1,25 @@
+{
+  "name": "@sikucss/core",
+  "version": "0.0.1",
+  "description": "Siku Design Tokens",
+  "main": "index.js",
+  "style": "tokens.scss",
+  "author": {
+    "email": "hatfim.ydniw.com"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sikucss/siku.git"
+  },
+  "dependencies": {
+    "@sikucss/design-tokens": "0.0.1",
+    "normalize.css": "7.0.0"
+  },
+  "devDependencies": {
+    "eyeglass": "^1.3.0"
+  }
+}

@@ -1,0 +1,60 @@
+// =============================================================================
+// TOOLS / #TYPE-SCALE
+// =============================================================================
+
+/// Compute the type size for the given type scale step
+/// @param {Number} $step
+/// @return {Number} In px
+
+@function siku--get-type-size($step) {
+  @if $step == 1 {
+    @return 12px;
+  }
+  // Yn = Yn-1 + {INT[(n-2)/4] + 1} * 2
+  @return siku--get-type-size($step - 1) + (floor(($step - 2) / 4) + 1) * 2;
+}
+
+/// Type scole follows a custom formula for determining each step size and supports sizes from 12px to 92px
+/// @type Map
+
+$siku--type-scale: ();
+@for $i from 1 through 23 {
+  $siku--type-scale: append(
+    $siku--type-scale,
+    siku--rem(siku--get-type-size($i))
+  );
+}
+
+/// Get the value of a specific step in the typescale
+/// @param {Number} $step
+/// @return {Number} In rem
+
+@function siku--type-scale($step) {
+  @return nth($siku--type-scale, $step);
+}
+
+/// Set the font-size value of a selector with the value at the given `$step`
+/// @param {Number} $step
+
+@mixin siku--type-scale($step) {
+  font-size: siku--type-scale($step);
+}
+
+/// Alias of `type-scale` mixin.
+/// @param {Number} $step
+/// @alias siku--type-scale
+
+@mixin siku--font-size($step) {
+  font-size: siku--type-scale($step);
+}
+
+/// Default mini-unit value
+/// @type Number
+$siku--mini-unit-size: 8px !default;
+
+/// Get the value of the corresponding number of units
+/// @param {Number} $count - The number of units to get the value for
+/// @return {Number} In rem units
+@function siku--mini-units($count) {
+  @return siku--rem($siku--mini-unit-size * $count);
+}

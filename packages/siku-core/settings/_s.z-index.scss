@@ -1,0 +1,25 @@
+// =============================================================================
+// SETTINGS / #Z-INDEX
+// =============================================================================
+
+// Our framework (and recommended consumer) z-index values are held in a map.
+// Access these values using:
+//
+//   z-index($KEY)
+//
+// For example:
+//
+//   .foo {
+//     color: z-index(5);
+//   }
+
+$z-index: (
+  modal: 9000,
+  overlay: 8000,
+  dropdown: 9100,
+  header: 6000,
+  footer: 5000,
+  hidden: - 1,
+  overflowHidden: - 1,
+  floating: 10000,
+);

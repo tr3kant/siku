@@ -1,0 +1,9 @@
+button {
+  padding: 0;
+
+  &:disabled {
+    color: color('black');
+    cursor: default;
+    opacity: 0.1;
+  }
+}

@@ -1,0 +1,74 @@
+// =============================================================================
+// SETTINGS / #SPACING
+// =============================================================================
+// Our spacings is an external dependency
+
+
+// Base Spacing
+// ------------------------------------
+
+$siku--spacing-01: 0.125rem !default;
+$siku--spacing-02: 0.25rem !default;
+$siku--spacing-03: 0.5rem !default;
+$siku--spacing-04: 0.75rem !default;
+$siku--spacing-05: 1rem !default;
+$siku--spacing-06: 1.5rem !default;
+$siku--spacing-07: 2rem !default;
+$siku--spacing-08: 2.5rem !default;
+$siku--spacing-09: 3rem !default;
+$siku--spacing-10: 4rem !default;
+$siku--spacing-11: 5rem !default;
+$siku--spacing-12: 6rem !default;
+
+// @alias siku--spacing-01
+$spacing-01: $siku--spacing-01 !default;
+// @alias siku--spacing-02
+$spacing-02: $siku--spacing-02 !default;
+// @alias siku--spacing-03
+$spacing-03: $siku--spacing-03 !default;
+// @alias siku--spacing-04
+$spacing-04: $siku--spacing-04 !default;
+// @alias siku--spacing-05
+$spacing-05: $siku--spacing-05 !default;
+// @alias siku--spacing-06
+$spacing-06: $siku--spacing-06 !default;
+// @alias siku--spacing-07
+$spacing-07: $siku--spacing-07 !default;
+// @alias siku--spacing-08
+$spacing-08: $siku--spacing-08 !default;
+// @alias siku--spacing-09
+$spacing-09: $siku--spacing-09 !default;
+// @alias siku--spacing-10
+$spacing-10: $siku--spacing-10 !default;
+// @alias siku--spacing-11
+$spacing-11: $siku--spacing-11 !default;
+// @alias siku--spacing-12
+$spacing-12: $siku--spacing-12 !default;
+
+
+// Layout Spacing
+// ------------------------------------
+
+$siku--layout-01: 1rem !default;
+$siku--layout-02: 1.5rem !default;
+$siku--layout-03: 2rem !default;
+$siku--layout-04: 3rem !default;
+$siku--layout-05: 4rem !default;
+$siku--layout-06: 6rem !default;
+$siku--layout-07: 10rem !default;
+
+
+// @alias siku--layout-01
+$layout-01: $siku--layout-01 !default;
+// @alias siku--layout-02
+$layout-02: $siku--layout-02 !default;
+// @alias siku--layout-03
+$layout-03: $siku--layout-03 !default;
+// @alias siku--layout-04
+$layout-04: $siku--layout-04 !default;
+// @alias siku--layout-05
+$layout-05: $siku--layout-05 !default;
+// @alias siku--layout-06
+$layout-06: $siku--layout-06 !default;
+// @alias siku--layout-07
+$layout-07: $siku--layout-07 !default;

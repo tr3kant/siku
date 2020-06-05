@@ -1,0 +1,56 @@
+// =============================================================================
+// SETTINGS / #FONT
+// =============================================================================
+
+
+/// Font family fallbacks for: IBM Plex Mono, IBM Plex Sans, IBM Plex Sans
+/// Condensed, IBM Plex Sans Hebrew, and IBM Plex Serif
+/// @type Map
+
+$siku--font-families: (
+  'heading':
+    unquote(
+      "'M PLUS Rounded 1c', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif"
+    ),
+  'body': unquote("'M PLUS 1p', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif"),
+);
+
+/// Get the font-family for an IBM Plex font
+/// @param {String} $name
+/// @return {String}
+
+@function siku--font-family($name) {
+  @return map-get($siku--font-families, $name);
+}
+
+/// Include the `font-family` definition for the given name in your selector
+/// @param {String} $name
+
+@mixin siku--font-family($name) {
+  font-family: siku--font-family($name);
+}
+
+/// Suggested font weights to be used in product
+/// @type Map
+
+$siku--font-weights: (
+  'light': 300,
+  'regular': 400,
+  'medium': 500,
+  'bold': 700,
+);
+
+/// Retrieve the font-weight value for a given name
+/// @param {String} $weight
+/// @return {Number}
+
+@function siku--font-weight($weight) {
+  @return map-get($siku--font-weights, $weight);
+}
+
+/// Set the `font-weight` property with the value for a given name
+/// @param {String} $weight
+
+@mixin siku--font-weight($weight) {
+  font-weight: siku--font-weight($weight);
+}
