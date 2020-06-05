@@ -1,0 +1,25 @@
+aliases:
+  shadow: "rgba(0, 0, 0, 0.1)"
+
+props:
+  - name: box-shadow-none
+    value: "none"
+  - name: box-shadow-flat
+    value: "none"
+  - name: box-shadow-raised
+    value: "0px 1px 2px {!shadow}"
+  - name: box-shadow-overlay
+    value: "0 4px 8px 0 {!shadow}"
+  - name: box-shadow-sticky-nav
+    value: "0 6px 12px 0 {!shadow}"
+  - name: box-shadow-temporary-nav
+    value: "0 8px 16px 0 {!shadow}"
+  - name: box-shadow-pop-out
+    value: "0 12px 24px 0 {!shadow}"
+
+
+global:
+  platform: "core"
+  type: "box-shadow"
+  category: "box-shadow"
+

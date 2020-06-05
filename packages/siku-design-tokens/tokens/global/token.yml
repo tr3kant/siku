@@ -1,7 +1,0 @@
-imports:
-  - ./color-base.yml
-  - ./color-core.yml
-  - ./color-interactive.yml
-  - ./font-family.yml
-  - ./font-weight.yml
-  - ./grid-gutter.yml

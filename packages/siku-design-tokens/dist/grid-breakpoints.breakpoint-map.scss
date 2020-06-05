@@ -1,0 +1,27 @@
+$siku--grid-breakpoints: (
+  "max": (
+    "width": 1584px,
+    "margin": 24px,
+    "columns": 16
+  ),
+  "md": (
+    "columns": 8,
+    "margin": 16px,
+    "width": 672px
+  ),
+  "xlg": (
+    "margin": 16px,
+    "columns": 16,
+    "width": 1312px
+  ),
+  "lg": (
+    "margin": 16px,
+    "columns": 16,
+    "width": 1056px
+  ),
+  "sm": (
+    "margin": 0,
+    "columns": 4,
+    "width": 320px
+  )
+);

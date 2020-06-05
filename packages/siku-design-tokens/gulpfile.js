@@ -1,72 +1,146 @@
 const gulp = require('gulp');
-const gulpTheo = require('gulp-theo');
+const browserSync = require('browser-sync').create();
 const theo = require('theo');
+const gulpLoadPlugins = require('gulp-load-plugins');
 
-const deepMap = require('./formatters/deepMap.scss');
-const map = require('./formatters/map.scss');
-const metaJson = require('./formatters/meta.json');
+const $ = gulpLoadPlugins();
 
-// Custom formats
-theo.registerFormat('deep-map.scss', deepMap);
-theo.registerFormat('map.scss', map);
-theo.registerFormat('meta.json', metaJson);
+theo.registerFormat(
+  'breakpoint-map.scss',
+  require('./formats/breakpoint-map.scss'),
+);
 
-// Format sources
-const deepMapSources = [
-  { src: './tokens/global/color-base.yml', prefix: 'color' },
-  { src: './tokens/global/breakpoints.yml', prefix: 'breakpoints' },
-];
+theo.registerFormat('color-map.scss', require('./formats/color-map.scss.js'));
+theo.registerFormat('map.scss', require('./formats/map.scss'));
+theo.registerFormat('common.js', require('./formats/common.js'));
 
-const scssMapSources = [
-  { src: './tokens/global/font-family.yml' },
+theo.registerTransform('web', ['color/hex']);
+theo.registerTransform('docs', ['color/hex']);
+
+const colorFormats = [{transformType: 'web', formatType: 'color-map.scss'}];
+const breakpointFormats = [{transformType: 'web', formatType: 'breakpoint-map.scss'}];
+const mapFormatsSources = [
+  { src: './tokens/global/border-radius.yml' },
+  { src: './tokens/global/box-shadow.yml' },
+  { src: './tokens/global/colors.yml' },
+  { src: './tokens/global/font-families.yml' },
   { src: './tokens/global/font-weight.yml' },
   { src: './tokens/global/spacing.yml' },
-  { src: './tokens/global/spacing-layout.yml' }
+  { src: './tokens/global/spacing-layout.yml' },
+  { src: './tokens/global/z-index.yml' }
+
 ];
 
-const tokenFormats = ['common.js', 'scss', 'meta.json'];
+const indexFormats = ['scss', 'common.js'];
 
-gulp.task('deep-map', (done) => {
-  deepMapSources.map(({ src, ...options }) => {
-    gulp.src(src)
-      .pipe(gulpTheo({
-        transform: { type: 'web', includeMeta: true },
-        format: { type: 'deep-map.scss', options }
-      }))
+// Hack to ensure Sass maps are prefixed with `polaris-`
+// (Theo relies on the filename to name all Sass maps)
+const addPrefix = {prefix: 'siku--'};
+
+const removePrefix = (gulpRenameOptions) => {
+  gulpRenameOptions.basename = gulpRenameOptions.basename.replace(
+    'siku--',
+    '',
+  );
+  return gulpRenameOptions;
+};
+
+gulp.task('color-formats', (done) => {
+  colorFormats.map(({transformType, formatType}) =>
+    gulp
+      .src('tokens/global/base-colors.yml')
+      .pipe($.rename(addPrefix))
+      .pipe(
+        $.theo({
+          transform: {type: transformType, includeMeta: true},
+          format: {type: formatType},
+        }),
+      )
+      .pipe($.rename(removePrefix))
       .on('error', (err) => {
-          throw new Error(err);
+        throw new Error(err);
+      })
+      .pipe(gulp.dest('dist')),
+  );
+  done();
+});
+
+gulp.task('breakpoint-formats', (done) => {
+  breakpointFormats.map(({transformType, formatType}) =>
+    gulp
+      .src('tokens/global/grid-breakpoints.yml')
+      .pipe($.rename(addPrefix))
+      .pipe(
+        $.theo({
+          transform: {type: transformType, includeMeta: true},
+          format: {type: formatType},
+        }),
+      )
+      .pipe($.rename(removePrefix))
+      .on('error', (err) => {
+        throw new Error(err);
+      })
+      .pipe(gulp.dest('dist')),
+  );
+  done();
+});
+
+gulp.task('map-formats', (done) => {
+  mapFormatsSources.map(({ src }) => {
+    gulp.src(src)
+      .pipe($.rename(addPrefix))
+      .pipe(
+        $.theo({
+          transform: {type: 'web', includeMeta: true},
+          format: { type: 'map.scss' }
+        }),
+      )
+      .pipe($.rename(removePrefix))
+      .on('error', (err) => {
+        throw new Error(err);
       })
       .pipe(gulp.dest('dist'))
   });
   done();
 });
 
-gulp.task('map', (done) => {
-  scssMapSources.map(({ src }) => {
-    gulp.src(src)
-      .pipe(gulpTheo({
-        transform: { type: 'web' },
-        format: { type: 'map.scss' }
-      }))
-      .on('error', (err) => {
-          throw new Error(err);
+
+gulp.task('index', (done) => {
+  indexFormats.map((type) => {
+    gulp.src('tokens/global/index.yml')
+      .pipe(
+        $.theo({
+          transform: { type: 'web' },
+          format: { type }
         })
+      )
+      .on('error', (err) => {
+        throw new Error(err);
+      })
       .pipe(gulp.dest('dist'))
   });
   done();
 });
 
+// gulp.task('docs', () => {
+//   return gulp.src('tokens/global/index.yml')
+//     .pipe(
+//       $.theo({
+//         transform: { type: 'docs' },
+//         format: {
+//           type: 'html',
+//           options: { transformPropName: (a) => a }
+//         }
+//       })
+//     )
+//     .pipe(gulp.dest('docs'))
+// });
 
-gulp.task('token', (done) => {
-  tokenFormats.map((type) => {
-    gulp.src('tokens/global/token.yml')
-      .pipe(gulpTheo({
-        transform: { type: 'web' },
-        format: { type }
-      }))
-      .pipe(gulp.dest('dist'))
-  });
-  done();
-});
 
-exports.default = gulp.series('deep-map', 'map', 'token');
+// gulp.task('serve', () => {
+//   browserSync.init({ server: { baseDir: 'docs' }});
+//   gulp.watch('tokens/global/*.yml', gulp.task('docs')).on('change', browserSync.reload);
+// });
+
+
+exports.default = gulp.series('color-formats', 'breakpoint-formats', 'map-formats', 'index');

@@ -1,0 +1,40 @@
+props:
+  breakpoint-sm-columns:
+    value: "4"
+  breakpoint-sm-margin:
+    value: "0"
+  breakpoint-sm-width:
+    value: "320px"
+
+  breakpoint-md-columns:
+    value: "8"
+  breakpoint-md-margin:
+    value: "16px"
+  breakpoint-md-width:
+    value: "672px"
+
+  breakpoint-lg-columns:
+    value: "16"
+  breakpoint-lg-margin:
+    value: "16px"
+  breakpoint-lg-width:
+    value: "1056px"
+
+  breakpoint-xlg-columns:
+    value: "16"
+  breakpoint-xlg-margin:
+    value: "16px"
+  breakpoint-xlg-width:
+    value: "1312px"
+
+  breakpoint-max-columns:
+    value: "16"
+  breakpoint-max-margin:
+    value: "24px"
+  breakpoint-max-width:
+    value: "1584px"
+
+global:
+  platform: "core"
+  type: "breakpoint"
+  category: "breakpoint"

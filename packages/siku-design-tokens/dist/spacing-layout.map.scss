@@ -1,35 +1,9 @@
-$spacing-layout-map: (
-  layout-01: (
-    siku--mini-units(2)
-  ),
-  layout-02: (
-    siku--mini-units(3)
-  ),
-  layout-03: (
-    siku--mini-units(4)
-  ),
-  layout-04: (
-    siku--mini-units(6)
-  ),
-  layout-05: (
-    siku--mini-units(8)
-  ),
-  layout-06: (
-    siku--mini-units(12)
-  ),
-  layout-07: (
-    siku--mini-units(20)
-  )
+$siku--spacing-layout: (
+  "layout-01": 1rem,
+  "layout-02": 1.5rem,
+  "layout-03": 2rem,
+  "layout-04": 3rem,
+  "layout-05": 4rem,
+  "layout-06": 6rem,
+  "layout-07": 10rem
 );
-
-@function siku--spacing-layout($variant) {
-  @if map-has-key($spacing-layout-map, "spacing-layout-#{$variant}") {
-    @return map-get($spacing-layout-map, "spacing-layout-#{$variant}");
-  }
-
-  @error 'spacing-layout #{$variant} not found.';
-}
-
-@mixin siku--spacing-layout($variant) {
-  spacing-layout: siku--spacing-layout($variant);
-}

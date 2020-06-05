@@ -1,0 +1,23 @@
+props:
+  modal:
+    value: "9000"
+  overlay:
+    value: "8000"
+  dropdown:
+    value: "9100"
+  header:
+    value: "6000"
+  footer:
+    value: "5000"
+  hidden:
+    value: "-1"
+  overflowHidden:
+    value: "-1"
+  floating:
+    value: "10000"
+
+
+global:
+  platform: "core"
+  type: "z-index"
+  category: "z-index"

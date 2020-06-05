@@ -1,18 +1,18 @@
 props:
   layout-01  :
-    value: "siku--mini-units(2)"
+    value: "1rem"
   layout-02  :
-    value: "siku--mini-units(3)"
+    value: "1.5rem"
   layout-03  :
-    value: "siku--mini-units(4)"
+    value: "2rem"
   layout-04  :
-    value: "siku--mini-units(6)"
+    value: "3rem"
   layout-05  :
-    value: "siku--mini-units(8)"
+    value: "4rem"
   layout-06  :
-    value: "siku--mini-units(12)"
+    value: "6rem"
   layout-07  :
-    value: "siku--mini-units(20)"
+    value: "10rem"
 
 
 global:
